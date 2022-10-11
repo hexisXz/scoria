@@ -1,2 +1,2 @@
-# hexstall
+# hexpmg
 a simple package manager 
