@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+usage() { echo "Usage: $0 [-k kill a program]" 1>&2; exit 1; }
+
+while getopts ":h" o; do
+    case "${o}" in
+        h)
+            echo "hi"
+            exit;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+
+
+
+

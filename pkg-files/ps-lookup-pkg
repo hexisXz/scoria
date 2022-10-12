@@ -1,0 +1,46 @@
+#!/bin/bash
+
+pkgname='ps-lookup'
+
+pkgdescription='a simple and easy to use command line app that searches for the process you enter.'
+
+pkgsource='https://github.com/hexisXz/ps-lookup.git'
+
+pkginstall='exe' 
+
+
+pkgconfig() {
+	if [ "$pkginstall" == "exe" ]; then
+		chmod +x ~/$pkgname/$pkgname && mv ~/$pkgname/$pkgname /bin 
+	fi
+}
+
+
+
+
+git clone $pkgsource
+	
+
+pkgconfig	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
