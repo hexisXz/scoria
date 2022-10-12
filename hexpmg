@@ -1,12 +1,12 @@
 #!/bin/bash
 
 
-usage() { echo "Usage: $0 [-k kill a program]" 1>&2; exit 1; }
+usage() { echo "Usage: $0 [-i install a program]" 1>&2; exit 1; }
 
-while getopts ":h" o; do
+while getopts ":i" o; do
     case "${o}" in
-        h)
-            echo "hi"
+        i)
+            source ~/hexpmg/pkg-files/$1-pkg
             exit;;
         *)
             usage
