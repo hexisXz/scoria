@@ -6,7 +6,6 @@ read r
 
 if [ "$r" == "y" ]; then
 	echo installing...
-	git clone https://github.com/hexisXz/hexpmg.git
 	chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
 fi
 
