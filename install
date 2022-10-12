@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo "would you like to install hexpmg (y/n)"
+
+read r
+
+if [ "$r" == "y" ]; then
+	echo installing...
+	git clone https://github.com/hexisXz/hexpmg.git
+	chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+fi
+
+
+if [ "$r" == "n" ]; then
+	exit 1
+fi
+
+
+
+
+
+
