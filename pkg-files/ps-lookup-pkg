@@ -11,7 +11,7 @@ pkginstall='exe'
 
 pkgconfig() {
 	if [ "$pkginstall" == "exe" ]; then
-		chmod +x ~/$pkgname/$pkgname && mv ~/$pkgname/$pkgname /bin 
+		chmod +x ~/$pkgname/$pkgname && sudo mv ~/$pkgname/$pkgname /bin 
 	fi
 }
 

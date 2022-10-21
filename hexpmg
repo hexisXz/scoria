@@ -1,20 +1,24 @@
 #!/bin/bash
 
 
-usage() { echo "Usage: $0 [-i install a program]" 1>&2; exit 1; }
+case $1 in
 
-while getopts ":i" o; do
-    case "${o}" in
-        i)
-            source ~/hexpmg/pkg-files/$1-pkg
-            exit;;
-        *)
-            usage
-            ;;
-    esac
-done
-shift $((OPTIND-1))
+  -i)
+    source ~/hexpmg/pkg-files/"$2-pkg"
+    ;;
 
+  -R)
+    sudo rm /bin/$2
+    ;;
+
+  -h)
+    echo "usage: [ install [install a program] ]"
+    ;;
+
+  *)
+   echo "error: wrong command"
+   ;;
+esac
 
 
 
