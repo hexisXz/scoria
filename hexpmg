@@ -8,6 +8,8 @@ case $1 in
     ;;
 
   -R)
+    # if you also want to remove the folder that belongs to the program
+    # type && sudo rm -r $2 after sudo rm /bin/$2
     sudo rm /bin/$2
     ;;
 
