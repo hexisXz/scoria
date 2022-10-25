@@ -4,24 +4,27 @@
 case $1 in
 
   -i)
-    source ~/hexpmg/pkg-files/"$2-pkg"
+    axel -q --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg/main/pkg-files/$2-pkg && source ~/"$2-pkg" && rm "$2-pkg"
     ;;
 
   -R)
     # if you also want to remove the folder that belongs to the program
-    # type && sudo rm -r $2 after sudo rm /bin/$2
+    # put && sudo rm -r $2 after sudo rm /bin/$2
     sudo rm /bin/$2
     ;;
 
+  -l)
+    which $2
+    ;;
+
   -h)
-    echo "usage: [ install [install a program] ]"
+    echo "usage: [ -i [install a program]  [ -R remove a program] ]"
     ;;
 
   *)
    echo "error: wrong command"
    ;;
 esac
-
 
 
 
