@@ -1,0 +1,31 @@
+#!/bin/bash
+
+pkgname="exa"
+
+pkgdescription="A modern replacement for ‘ls’."
+
+pkgsource=""
+
+dependencies="cargo"
+
+pkginstall="pkgmgr"
+
+pkmgr="cargo"
+
+pkgconfig() {
+	if command -v $pkmgr >/dev/null; then
+		$pkmgr install $pkgname
+	else
+	   sudo apt install $pkmgr && $pkmgr install $pkgname	
+        fi
+}
+
+
+
+pkgconfig
+
+
+
+
+
+

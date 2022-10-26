@@ -6,6 +6,8 @@ pkgdescription='a simple and easy to use command line app that searches for the 
 
 pkgsource='https://github.com/hexisXz/ps-lookup.git'
 
+dependencies=""
+
 pkginstall='exe' 
 
 
