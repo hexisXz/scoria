@@ -5,8 +5,12 @@ echo "would you like to install hexpmg (y/n)"
 read r
 
 if [ "$r" == "y" ]; then
-	echo installing...
-	chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+	if command -v axel >/dev/null; then
+		echo installing...
+		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+	else
+	   sudo apt install axel && echo installing... && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+	fi
 fi
 
 
