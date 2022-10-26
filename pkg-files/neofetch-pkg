@@ -13,7 +13,7 @@ pkginstall='make'
 
 pkgconfig() {
 	if $dependencies -v cmatrix >/dev/null; then
-		git clone https://github.com/dylanaraps/neofetch.git && cd neofetch && sudo make install ~/neofetch
+		git clone https://github.com/dylanaraps/neofetch.git && cd neofetch && sudo make instal
 	else
            sudo apt install make && git clone https://github.com/dylanaraps/neofetch.git && cd neofetch && sudo make install
         fi
