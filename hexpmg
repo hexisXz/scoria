@@ -38,7 +38,9 @@ case $1 in
 
                   -R remove a program
 		
-		  -l list all installed programs]"
+		  -l list all installed programs
+		  
+		  -RAP Remove All -pkg files]"
     ;;
 
   *)
