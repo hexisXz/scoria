@@ -32,8 +32,6 @@ case $1 in
 
 # remove a program
   -R)
-    # if you also want to remove the folder that belongs to the program
-    # put && sudo rm -r $2 after sudo rm /bin/$2
     echo -e "${red}removing program"
     sudo rm /bin/$2 && sudo rm -r $2
 
