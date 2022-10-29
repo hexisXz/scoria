@@ -1,11 +1,21 @@
 #!/bin/bash
 
+# colors
+red='\033[0;31m'
+blue='\033[0;34m'
+green='\033[0;32m'
+purple='\033[0;35m'
+NC='\033[0m' # No Color
+
+
 
 case $1 in
 
 # install a program
   -i)
+    echo -e "${blue}creating list file"
      touch pkg-files
+     echo -e "${green}Downloading"
      axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg/main/pkg-files/$2-pkg && source ~/"$2-pkg" && echo "$2" >> pkg-files
 
     ;;
@@ -14,14 +24,18 @@ case $1 in
   -R)
     # if you also want to remove the folder that belongs to the program
     # put && sudo rm -r $2 after sudo rm /bin/$2
+    echo -e "${red}removing program"
     sudo rm /bin/$2 && sudo rm -r $2
 
     e=$(ls | grep -i $2-pkg)
 
     if command -v $e >/dev/null; then
-	    exit 1
+	    echo -e "${green}Done"
+ 	    exit 1
     else
+       echo -e "${red}removing pkg file"
        rm $2-pkg
+       echo -e "${green}Done"
     fi
 
 
@@ -49,6 +63,6 @@ case $1 in
     ;;
 
   *)
-   echo "error: wrong command"
+   echo -e "${red}error: wrong command"
    ;;
 esac
