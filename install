@@ -9,7 +9,16 @@ if [ "$r" == "y" ]; then
 		echo installing...
 		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
 	else
-	   sudo apt install axel && echo installing... && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+	   echo "ERROR: you NEED axel to run hexpmg at the moment. would you like to install axel (y/n)" 
+	   read e 
+
+	   if [ "$e" == "y" ]; then
+		   sudo apt install axel && echo installing... && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+	   
+	   else
+	      exit 1
+	   fi
+	
 	fi
 fi
 
