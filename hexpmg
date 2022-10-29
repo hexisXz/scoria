@@ -41,11 +41,11 @@ case $1 in
   -h)
     echo "usage: [-i install a program
 
-                  -R remove a program
+        -R remove a program
 		
-		  -l list all installed programs
+        -l list all installed programs
 		  
-		  -RAP Remove All -pkg files]"
+        -RAP Remove All -pkg files]"
     ;;
 
   *)
