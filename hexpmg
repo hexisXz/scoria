@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # colors
 red='\033[0;31m'
 blue='\033[0;34m'
@@ -16,7 +17,16 @@ case $1 in
     echo -e "${blue}creating list file"
      touch pkg-files
      echo -e "${green}Downloading${purple}"
-     axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg/main/pkg-files/$2-pkg && source ~/"$2-pkg" && echo "$2" >> pkg-files
+     axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg/main/pkg-files/$2-pkg 2> /dev/null
+
+    case $? in
+	 1)
+          echo -e "${red}Error wrong URL" && exit 1
+
+	 ;;
+    esac
+
+    source ~/"$2-pkg" && echo "$2" >> pkg-files
 
     ;;
 
@@ -38,15 +48,26 @@ case $1 in
        echo -e "${green}Done"
     fi
 
-
     ;;
 
 # remove all -pkg files
   -RAP)
-      rm *-pkg
-      ;;
+      rm *-pkg 2> /dev/null
 
-# list all installed programs 
+      case $? in
+	   1)
+	    echo -e "${blue}nothing to do"
+	    echo -e "${green}no pkg files on the system"
+
+	   ;;
+           0)
+            echo -e "${green}removed all pkg files"
+	   ;;
+      esac
+
+
+    ;;
+# list all installed programs
   -l)
     cat pkg-files
     ;;
@@ -56,12 +77,11 @@ case $1 in
     echo "usage: [-i install a program
 
         -R remove a program
-		
-        -l list all installed programs
-		  
-        -RAP Remove All -pkg files]"
-    ;;
 
+        -l list all installed programs
+
+        -RAP Remove All -pkg files]"
+   ;;
   *)
    echo -e "${red}error: wrong command"
    ;;
