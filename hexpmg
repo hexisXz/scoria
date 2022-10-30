@@ -48,6 +48,12 @@ case $1 in
 
     ;;
 
+
+  -up)
+     echo -e "${green}updating${purple}"
+     sudo rm /bin/hexpmg && sudo rm -r hexpmg && git clone https://github.com/hexisXz/hexpmg.git && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin/
+
+     ;;
 # remove all -pkg files
   -RAP)
       rm *-pkg 2> /dev/null
@@ -72,7 +78,7 @@ case $1 in
 
 # display a list of all commands
   -h)
-    echo "usage: [-i install a program
+    echo -e "${blue}usage: [-i install a program
 
         -R remove a program
 
@@ -81,6 +87,13 @@ case $1 in
         -RAP Remove All -pkg files]"
    ;;
   *)
-   echo -e "${red}error: wrong command"
+   echo -e "${blue}usage: [-i install a program
+
+        -R remove a program
+
+        -l list all installed programs
+
+        -RAP Remove All -pkg files]"
+
    ;;
 esac
