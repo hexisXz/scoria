@@ -48,12 +48,6 @@ case $1 in
 
     ;;
 
-
-  -up)
-     echo -e "${green}updating${purple}"
-     sudo rm /bin/hexpmg && sudo rm -r hexpmg && git clone https://github.com/hexisXz/hexpmg.git && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin/
-
-     ;;
 # remove all -pkg files
   -RAP)
       rm *-pkg 2> /dev/null
