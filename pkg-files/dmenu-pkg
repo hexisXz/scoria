@@ -13,7 +13,7 @@ pkginstall='zip'
 
 pkgconfig() {
 	if [ "$pkginstall" == "zip" ]; then
-		sudo apt install axel && axel -a https://dl.suckless.org/tools/dmenu-5.2.tar.gz && gunzip dmenu-5.2.tar.gz && tar --extract -f dmenu-5.2.tar && cd dmenu && sudo make install
+		sudo apt install axel && axel -a https://dl.suckless.org/tools/dmenu-5.2.tar.gz && gunzip dmenu-5.2.tar.gz && tar --extract -f dmenu-5.2.tar && cd dmenu-5.2 && sudo make install
 	fi
 }
 
