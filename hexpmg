@@ -48,6 +48,7 @@ case $1 in
 
     ;;
 
+# update program
    -Up)
       rm $2-pkg 2> /dev/null
 
