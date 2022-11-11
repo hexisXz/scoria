@@ -111,7 +111,9 @@ case $1 in
 
         -l list all installed programs
 
-        -RAP Remove All -pkg files]"
+        -RAP Remove All -pkg files
+	
+	-Up update a program]"
    ;;
   *)
    echo -e "${blue}usage: [-i install a program
@@ -120,7 +122,9 @@ case $1 in
 
         -l list all installed programs
 
-        -RAP Remove All -pkg files]"
+        -RAP Remove All -pkg files
+	
+	-Up update a program]"
 
    ;;
 esac
