@@ -48,6 +48,12 @@ case $1 in
 
     ;;
 
+# remove pkg files and the source folders (this is needed to run before you update a program)
+-AUTORM)
+       rm $2-pkg && sudo rm -r $2
+    ;;
+
+
 # update program
    -Up)
       rm $2-pkg 2> /dev/null
@@ -62,8 +68,8 @@ case $1 in
       esac
 
       echo -e "${blue}updating program"
-      sudo rm /bin/$2 
-      
+      sudo rm /bin/$2
+
       axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg/main/pkg-files/$2-pkg 2> /dev/null
 
       case $? in
@@ -77,9 +83,9 @@ case $1 in
 
       echo -e "${green}Done"
 
- 
 
-      ;;      
+
+      ;;
 
 # remove all -pkg files
   -RAP)
