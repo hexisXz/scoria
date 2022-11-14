@@ -18,4 +18,6 @@ pkgconfig() {
 
 
 
-pkgconfig	
+pkgconfig
+
+echo "note to uninstall pacstall you need to run bash -c "$(curl -fsSL https://git.io/JEZbi || wget -q https://git.io/JEZbi -O -)" in your terminal"
