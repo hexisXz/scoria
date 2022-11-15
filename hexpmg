@@ -17,7 +17,7 @@ case $1 in
     echo -e "${blue}creating list file"
      touch pkg-files
      echo -e "${green}Downloading${purple}"
-     axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg/main/pkg-files/$2-pkg 2> /dev/null
+     axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg 2> /dev/null
 
     case $? in
          1)
@@ -70,7 +70,7 @@ case $1 in
       echo -e "${blue}updating program"
       sudo rm /bin/$2
 
-      axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg/main/pkg-files/$2-pkg 2> /dev/null
+      axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg 2> /dev/null
 
       case $? in
            1)
