@@ -133,7 +133,9 @@ case $1 in
 
         -RAP Remove All -pkg files
 	
-	-Up update a program]"
+	-Up update a program
+	
+	-RP remove a package along with the folder and pkg file]"
    ;;
   *)
    echo -e "${blue}usage: [-i install a program
@@ -144,7 +146,9 @@ case $1 in
 
         -RAP Remove All -pkg files
 	
-	-Up update a program]"
+	-Up update a program
+	
+	-RP remove a package along with the folder and pkg file]"
 
    ;;
 esac
