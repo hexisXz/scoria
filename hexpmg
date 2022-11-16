@@ -14,8 +14,6 @@ case $1 in
 
 # install a program
   -i)
-    echo -e "${blue}creating list file"
-     touch pkg-files
      echo -e "${green}Downloading${purple}"
      axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg 2> /dev/null
 
@@ -26,7 +24,7 @@ case $1 in
          ;;
     esac
 
-    source ~/"$2-pkg" && echo "$2" >> pkg-files
+    source ~/"$2-pkg"
 
     ;;
 
@@ -48,13 +46,30 @@ case $1 in
 
     ;;
 
-# remove pkg files and the source folders (this is needed to run before you update a program)
--AUTORM)
-       rm $2-pkg && sudo rm -r $2
-    ;;
+
+# remove a package along with the folder and pkg file
+   -RP)
+      rm *-pkg 2> /dev/null
+
+      case $? in
+           1)
+            echo -e "${blue}nothing to do"
+            echo -e "${green}no pkg files on the system"
+
+           ;;
+           0)
+            echo -e "${green}removed all pkg files"
+           ;;
+      esac
+
+      echo -e "${red}removing folder"
+      sudo rm -r $2
+      echo -e "${green}Done"
+
+      ;;
 
 
-# update program
+# update a program
    -Up)
       rm $2-pkg 2> /dev/null
 
@@ -66,6 +81,9 @@ case $1 in
             echo -e "${green}removing pkg file"
            ;;
       esac
+
+      echo -e "${red}removing folder"
+      sudo rm -r $2
 
       echo -e "${blue}updating program"
       sudo rm /bin/$2
@@ -103,10 +121,6 @@ case $1 in
       esac
 
 
-    ;;
-# list all installed programs
-  -l)
-    cat pkg-files
     ;;
 
 # display a list of all commands
