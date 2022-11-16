@@ -26,6 +26,25 @@ case $1 in
 
     source ~/"$2-pkg"
 
+    rm *-pkg 2> /dev/null
+
+    case $? in
+         1)
+          echo -e "${blue}nothing to do"
+          echo -e "${green}no pkg files on the system"
+
+         ;;
+         0)
+          echo -e "${green}removed all pkg files"
+         ;;
+     esac
+
+     echo -e "${red}removing folder"
+     sudo rm -r $2
+     echo -e "${green}Done"
+
+
+
     ;;
 
 # remove a program
@@ -85,7 +104,7 @@ case $1 in
       echo -e "${red}removing folder"
       sudo rm -r $2
 
-      echo -e "${blue}updating program"
+      echo -e "${purple}updating program${blue}"
       sudo rm /bin/$2
 
       axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg 2> /dev/null
@@ -100,6 +119,24 @@ case $1 in
       source ~/"$2-pkg"
 
       echo -e "${green}Done"
+
+      rm *-pkg 2> /dev/null
+
+      case $? in
+           1)
+            echo -e "${blue}nothing to do"
+            echo -e "${green}no pkg files on the system"
+
+           ;;
+           0)
+            echo -e "${green}removed all pkg files"
+           ;;
+       esac
+
+      echo -e "${red}removing folder"
+      sudo rm -r $2
+      echo -e "${green}Done"
+
 
 
 
