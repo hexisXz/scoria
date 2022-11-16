@@ -1,19 +1,30 @@
 #!/bin/bash
 
-echo "would you like to install hexpmg (y/n)"
+
+# colors
+red='\033[0;31m'
+blue='\033[0;34m'
+green='\033[0;32m'
+purple='\033[0;35m'
+NC='\033[0m' # No Color
+
+
+
+
+echo -e "${purple}would you like to install hexpmg (y/n)"
 
 read r
 
-if [ "$r" == "y" ]; then
+if [[ "$r" == "y" ]]; then
 	if command -v axel >/dev/null; then
-		echo installing...
+		echo -e "${green}installing"
 		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
 	else
-	   echo "ERROR: you NEED axel to run hexpmg at the moment. would you like to install axel (y/n)" 
+	   echo -e "${red}ERROR: you NEED axel to run hexpmg would you like to install axel (y/n)" 
 	   read e 
 
-	   if [ "$e" == "y" ]; then
-		   sudo apt install axel && echo installing... && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+	   if [[ "$e" == "y" ]]; then
+		   sudo apt install axel && echo -e "${green}installing" && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && echo -e "${green}Done"
 	   
 	   else
 	      exit 1
@@ -23,7 +34,7 @@ if [ "$r" == "y" ]; then
 fi
 
 
-if [ "$r" == "n" ]; then
+if [[ "$r" == "n" ]]; then
 	exit 1
 fi
 
