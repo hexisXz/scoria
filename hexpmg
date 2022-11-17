@@ -47,6 +47,40 @@ case $1 in
 
     ;;
 
+
+# install a program but keep the source code
+  -iksc)
+       echo -e "${green}Downloading${purple}"
+       axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg 2> /dev/null
+
+       case $? in
+            1)
+             echo -e "${red}Error wrong URL" && exit 1
+
+            ;;
+        esac
+
+      source ~/"$2-pkg"
+
+      rm *-pkg 2> /dev/null
+
+      case $? in
+           1)
+            echo -e "${blue}nothing to do"
+            echo -e "${green}no pkg files on the system"
+
+           ;;
+           0)
+            echo -e "${green}removed all pkg files"
+	   ;;
+       esac
+
+      echo -e "${green}Done"
+
+      ;;
+
+
+
 # remove a program
   -R)
     echo -e "${red}removing program"
@@ -64,6 +98,26 @@ case $1 in
     fi
 
     ;;
+
+
+# remove a package but keep the source code
+   -RPksc)
+         echo -e "${red}removing program"
+
+         sudo rm /bin/$2
+
+         e=$(ls | grep -i $2-pkg)
+
+         if command -v $e >/dev/null; then
+                 echo -e "${green}Done"
+                 exit 1
+         else
+            echo -e "${red}removing pkg file"
+            rm $2-pkg
+            echo -e "${green}Done"
+         fi
+
+	 ;;
 
 
 # remove a package along with the folder and pkg file
@@ -164,28 +218,33 @@ case $1 in
   -h)
     echo -e "${blue}usage: [-i install a program
 
-        -R remove a program
+        -R: remove a program
 
-        -l list all installed programs
-
-        -RAP Remove All -pkg files
+        -RAP: Remove All -pkg files
 	
-	-Up update a program
+	-Up: update a program
 	
-	-RP remove a package along with the folder and pkg file]"
+	-RP: remove a package along with the folder and pkg file
+	
+	-iksc: install a program but keep the source code
+	
+	-RPksc: remove a package but keep the source code]
+"
    ;;
   *)
    echo -e "${blue}usage: [-i install a program
 
-        -R remove a program
+        -R: remove a program
 
-        -l list all installed programs
-
-        -RAP Remove All -pkg files
+        -RAP: Remove All -pkg files
 	
-	-Up update a program
+	-Up: update a program
 	
-	-RP remove a package along with the folder and pkg file]"
+	-RP: remove a package along with the folder and pkg file
+	
+	-iksc: install a program but keep the source code
+	
+	-RPksc: remove a package but keep the source code]"
 
    ;;
 esac
