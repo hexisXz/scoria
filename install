@@ -24,7 +24,24 @@ if [[ "$r" == "y" ]]; then
 	   read e 
 
 	   if [[ "$e" == "y" ]]; then
-		   sudo apt install axel && echo -e "${green}installing" && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && echo -e "${green}Done"
+		   if command -v pacman 2>/dev/null; then
+			   sudo pacman -S axel 
+
+	           fi
+
+                   
+		   if command -v apt 2>/dev/null; then
+			   sudo apt install axel 
+
+	           fi
+
+                   if command -v dnf 2>/dev/null; then
+			   sudo dnf install axel 
+
+	           fi
+
+
+		   echo -e "${green}installing" && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && echo -e "${green}Done"
 	   
 	   else
 	      exit 1
