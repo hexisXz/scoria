@@ -47,6 +47,11 @@ case $1 in
 
     ;;
 
+# uninstall hexpmg
+  -UN)
+     exec ~/.config/hexpmg/uninstall
+     ;;
+
 # update hexpmg or update package manager
   -UP)
      exec ~/.config/hexpmg/update
@@ -235,7 +240,9 @@ case $1 in
 	
 	-RPksc: remove a package but keep the source code
 	
-	-UP: update hexpmg]
+	-UP: update hexpmg
+	
+	-UN: uninstall hexpmg]
 "
    ;;
   *)
@@ -253,7 +260,9 @@ case $1 in
 	
 	-RPksc: remove a package but keep the source code
 	
-	-UP: update hexpmg]"
+	-UP: update hexpmg
+	
+	-UN: uninstall hexpmg]"
 
    ;;
 esac
