@@ -233,7 +233,9 @@ case $1 in
 	
 	-iksc: install a program but keep the source code
 	
-	-RPksc: remove a package but keep the source code]
+	-RPksc: remove a package but keep the source code
+	
+	-UP: update hexpmg]
 "
    ;;
   *)
@@ -249,7 +251,9 @@ case $1 in
 	
 	-iksc: install a program but keep the source code
 	
-	-RPksc: remove a package but keep the source code]"
+	-RPksc: remove a package but keep the source code
+	
+	-UP: update hexpmg]"
 
    ;;
 esac
