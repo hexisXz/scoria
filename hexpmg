@@ -47,6 +47,11 @@ case $1 in
 
     ;;
 
+# update hexpmg or update package manager
+  -UP)
+     exec ~/.config/hexpmg/update
+     ;;
+
 
 # install a program but keep the source code
   -iksc)
