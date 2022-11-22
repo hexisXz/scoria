@@ -18,7 +18,8 @@ read r
 if [[ "$r" == "y" ]]; then
 	if command -v axel >/dev/null; then
 		echo -e "${green}installing"
-		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin
+		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall/uninstall ~/.config/hexpmg/ && chmod +x ~/.config/hexpmg/uninstall && chmod +x ~/.config/hexpmg/update && echo -e "${green}Done"
+
 	else
 	   echo -e "${red}ERROR: you NEED axel to run hexpmg would you like to install axel (y/n)" 
 	   read e 
