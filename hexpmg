@@ -26,6 +26,10 @@ case $1 in
 
     source ~/"$2-pkg"
 
+    echo -e "${red}removing folder"
+    sudo rm -r $2
+
+
     rm *-pkg 2> /dev/null
 
     case $? in
@@ -39,8 +43,6 @@ case $1 in
          ;;
      esac
 
-     echo -e "${red}removing folder"
-     sudo rm -r $2
      echo -e "${green}Done"
 
 
@@ -62,6 +64,10 @@ case $1 in
 
       source ~/"$2-pkg"
 
+      echo -e "${red}removing folder"
+
+      sudo rm -r $2
+
       rm *-pkg 2> /dev/null
 
       case $? in
@@ -75,8 +81,6 @@ case $1 in
            ;;
        esac
 
-       echo -e "${red}removing folder"
-       sudo rm -r $2
        echo -e "${green}Done"
 
 
