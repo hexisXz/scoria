@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 echo -e "${green}updating"
 
-sudo rm /bin/hexpmg && echo -e "${blue}hexpmg will now reinstall.${green}" && git clone https://github.com/hexisXz/hexpmg.git && cd hexpmg && chmod +x install && ./install && sudo rm -r ~/hexpmg
+sudo rm /bin/hexpmg && sudo rm -r ~/.config/hexpmg && echo -e "${blue}hexpmg will now reinstall.${green}" && git clone https://github.com/hexisXz/hexpmg.git && cd hexpmg && chmod +x install && ./install && sudo rm -r ~/hexpmg
 
 
 

@@ -18,6 +18,7 @@ read r
 if [[ "$r" == "y" ]]; then
 	if command -v axel >/dev/null; then
 		echo -e "${green}installing"
+		echo -e "${blue}creating list file" && touch ~/hexpmg-list
 		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall/uninstall ~/.config/hexpmg/ && chmod +x ~/.config/hexpmg/uninstall && chmod +x ~/.config/hexpmg/update && sudo rm -r ~/hexpmg && echo -e "${green}Done"
 
 	else

@@ -55,6 +55,13 @@ case $1 in
     ;;
 
 
+# list all installed programs
+  -l)
+    cat ~/hexpmg-list
+
+   ;;
+
+
 # install the latest pkg's
   -ilp)
       echo -e "${green}Downloading${purple}"
@@ -139,7 +146,8 @@ case $1 in
 # remove a program
   -R)
     echo -e "${red}removing program"
-    sudo rm /bin/$2 && sudo rm -r $2
+    sudo rm /bin/$2 && sudo rm -r $2 && sed -i 's/'$2'//g' hexpmg-list
+
 
     e=$(ls | grep -i $2-pkg)
 
@@ -159,7 +167,8 @@ case $1 in
    -RPksc)
          echo -e "${red}removing program"
 
-         sudo rm /bin/$2
+         sudo rm /bin/$2 && sed -i 's/$2//g' hexpmg-list
+
 
          e=$(ls | grep -i $2-pkg)
 
@@ -191,7 +200,8 @@ case $1 in
       esac
 
       echo -e "${red}removing folder"
-      sudo rm -r $2
+      sudo rm -r $2 && sed -i 's/$2//g' hexpmg-list
+
       echo -e "${green}Done"
 
       ;;
@@ -214,7 +224,7 @@ case $1 in
       sudo rm -r $2
 
       echo -e "${purple}updating program${blue}"
-      sudo rm /bin/$2
+      sudo rm /bin/$2 && sed -i 's/'$2'//g' hexpmg-list
 
       axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg 2> /dev/null
 
@@ -275,6 +285,8 @@ case $1 in
 
         -R: remove a program
 
+	-l: list all installed programs
+
         -RAP: Remove All -pkg files
 	
 	-Up: update a program
@@ -296,6 +308,8 @@ case $1 in
    echo -e "${blue}usage: [-i: install a program
 
         -R: remove a program
+
+        -l: list all installed programs
 
         -RAP: Remove All -pkg files
 	

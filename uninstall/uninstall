@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-sudo rm /bin/hexpmg && sudo rm -r ~/hexpmg && sudo rm -r ~/.config/hexpmg
+sudo rm /bin/hexpmg && sudo rm -r ~/hexpmg && sudo rm -r ~/.config/hexpmg && sudo rm ~/hexpmg-list
 
 
 
