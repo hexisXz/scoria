@@ -101,12 +101,12 @@ case $1 in
 
 # uninstall hexpmg
   -UN)
-     exec ~/.config/hexpmg/uninstall
+     exec ~/.config/hexpmg/uninstall/uninstall
      ;;
 
 # update hexpmg or update package manager
   -UP)
-     exec ~/.config/hexpmg/update
+     exec ~/.config/hexpmg/update/update
      ;;
 
 

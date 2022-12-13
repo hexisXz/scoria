@@ -19,7 +19,7 @@ if [[ "$r" == "y" ]]; then
 	if command -v axel >/dev/null; then
 		echo -e "${green}installing"
 		echo -e "${blue}creating list file" && touch ~/hexpmg-list
-		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall/uninstall ~/.config/hexpmg/ && chmod +x ~/.config/hexpmg/uninstall && chmod +x ~/.config/hexpmg/update && sudo rm -r ~/hexpmg && echo -e "${green}Done"
+		chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall ~/.config/hexpmg/ && sudo rm -r ~/hexpmg && echo -e "${green}Done"
 
 	else
 	   echo -e "${red}ERROR: you NEED axel to run hexpmg would you like to install axel (y/n)" 
@@ -43,7 +43,9 @@ if [[ "$r" == "y" ]]; then
 	           fi
 
 
-		   echo -e "${green}installing" && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall/uninstall ~/.config/hexpmg/ && chmod +x ~/.config/hexpmg/uninstall && chmod +x ~/.config/hexpmg/update &&sudo rm -r ~/hexpmg && echo -e "${green}Done"
+		   echo -e "${green}installing" && chmod +x ~/hexpmg/hexpmg && sudo mv ~/hexpmg/hexpmg /bin && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall ~/.config/hexpmg/ && sudo rm -r ~/hexpmg && echo -e "${green}Done"
+
+
 	   
 	   else
 	      exit 1
