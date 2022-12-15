@@ -200,12 +200,8 @@ case $1 in
 	-Up: update a program
 	
 	-RP: remove a package along with the folder and pkg file
-	
-	-iksc: install a program but keep the source code
 
 	-ilp: install the latest pkg's
-	
-	-RPksc: remove a package but keep the source code
 	
 	-UP: update hexpmg
 	
@@ -225,11 +221,7 @@ case $1 in
 	
 	-RP: remove a package along with the folder and pkg file
 	
-	-iksc: install a program but keep the source code
-
 	-ilp: install the latest pkg's
-	
-	-RPksc: remove a package but keep the source code
 	
 	-UP: update hexpmg
 	
