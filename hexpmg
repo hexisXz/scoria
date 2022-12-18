@@ -199,8 +199,6 @@ case $1 in
 	
 	-Up: update a program
 	
-	-RP: remove a package along with the folder and pkg file
-
 	-ilp: install the latest pkg's
 	
 	-UP: update hexpmg
@@ -218,8 +216,6 @@ case $1 in
         -RAP: Remove All -pkg files
 	
 	-Up: update a program
-	
-	-RP: remove a package along with the folder and pkg file
 	
 	-ilp: install the latest pkg's
 	
