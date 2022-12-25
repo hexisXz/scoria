@@ -1,63 +1,47 @@
 
 # Table of Contents
 
-1.  [**hexpmg**](#org1dffeb1)
-    1.  [a simple package manager that builds programs from source](#org3a245ed)
-2.  [**how to install**](#org4e7ff7f)
-    1.  [copy and paste](#org29c7d20)
-3.  [**hexpmg repo**](#org4f940e3)
-    1.  [https://github.com/hexisXz/hexpmg-repo if you want the latest pkg&rsquo;s then you can go to https://github.com/hexisXz/hexpmg-repo.latest](#org9d24048)
-4.  [**new**](#org4e6ac9f)
-    1.  [hexpmg is now in the aur!](#orgcf6db55)
-5.  [**read the wiki for more info**](#org2d257bb)
+1.  [**hexpmg**](#orgfbe029d)
+2.  [**how to install**](#org905f5af)
+3.  [**hexpmg repo**](#orgf3d1627)
+4.  [**new**](#org9d4f225)
+5.  [read the wiki for more info](#org41ae5a7)
 
 
 
-<a id="org1dffeb1"></a>
+<a id="orgfbe029d"></a>
 
 # **hexpmg**
 
-
-<a id="org3a245ed"></a>
-
-## a simple package manager that builds programs from source
+a simple package manager that builds programs from source
 
 
-<a id="org4e7ff7f"></a>
+<a id="org905f5af"></a>
 
 # **how to install**
 
-
-<a id="org29c7d20"></a>
-
-## copy and paste
+copy and paste
 
 > 
 > 
 > git clone <https://github.com/hexisXz/hexpmg.git> && cd hexpmg && chmod +x install && ./install in your terminal
 
 
-<a id="org4f940e3"></a>
+<a id="orgf3d1627"></a>
 
 # **hexpmg repo**
 
-
-<a id="org9d24048"></a>
-
-## <https://github.com/hexisXz/hexpmg-repo> if you want the latest pkg&rsquo;s then you can go to <https://github.com/hexisXz/hexpmg-repo.latest>
+<https://github.com/hexisXz/hexpmg-repo> if you want the latest pkg&rsquo;s then you can go to <https://github.com/hexisXz/hexpmg-repo.latest>
 
 
-<a id="org4e6ac9f"></a>
+<a id="org9d4f225"></a>
 
 # **new**
 
-
-<a id="orgcf6db55"></a>
-
-## hexpmg is now in the aur!
+hexpmg is now in the aur!
 
 
-<a id="org2d257bb"></a>
+<a id="org41ae5a7"></a>
 
-# **read the wiki for more info**
+# read the wiki for more info
 
