@@ -53,7 +53,7 @@ case $1 in
 
 # list all installed programs
   -l)
-    cat ~/hexpmg-list
+    ls /usr/src/hexpmg-list
 
    ;;
 
