@@ -26,7 +26,7 @@ copy and paste
 
 > 
 > 
-> git clone <https://github.com/hexisXz/hexpmg.git> && cd hexpmg && chmod +x install && ./install
+> git clone <https://github.com/hexisXz/hexpmg.git> && cd hexpmg && chmod +x install && ./install.sh
 
 in your terminal
 
