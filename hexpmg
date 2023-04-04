@@ -169,23 +169,6 @@ case $1 in
 
       ;;
 
-# remove all -pkg files
-  -RAP)
-      rm *-pkg 2> /dev/null
-
-      case $? in
-           1)
-            echo -e "${blue}nothing to do"
-            echo -e "${green}no pkg files on the system"
-
-           ;;
-           0)
-            echo -e "${green}removed all pkg files"
-           ;;
-      esac
-
-
-    ;;
 
 # display a list of all commands
   -h)
@@ -195,8 +178,6 @@ case $1 in
 
 	-l: list all installed programs
 
-        -RAP: Remove All -pkg files
-	
 	-Up: update a program
 	
 	-ilp: install the latest pkg's
@@ -213,8 +194,6 @@ case $1 in
 
         -l: list all installed programs
 
-        -RAP: Remove All -pkg files
-	
 	-Up: update a program
 	
 	-ilp: install the latest pkg's
