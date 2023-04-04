@@ -26,7 +26,7 @@ copy and paste
 
 > 
 > 
-> git clone <https://github.com/hexisXz/hexpmg.git> && cd hexpmg && chmod +x install.sh && ./install.sh
+> sh <(curl -L https://raw.githubusercontent.com/hexisXz/hexpmg/main/install.sh)
 
 in your terminal
 
