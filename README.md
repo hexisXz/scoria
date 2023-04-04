@@ -26,7 +26,7 @@ copy and paste
 
 > 
 > 
-> sh <(curl -L https://raw.githubusercontent.com/hexisXz/hexpmg/main/install.sh)
+> sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg/main/install.sh)
 
 in your terminal
 
