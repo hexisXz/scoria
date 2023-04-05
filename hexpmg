@@ -29,10 +29,6 @@ case $1 in
          ;;
     esac
 
-    source ~/"$2-pkg"
-
-    rm *-pkg 2> /dev/null
-
     case $? in
          1)
           echo -e "${blue}nothing to do"
@@ -69,10 +65,6 @@ case $1 in
 
            ;;
       esac
-
-      source ~/"$2-pkg"
-
-      rm *-pkg 2> /dev/null
 
       case $? in
            1)
@@ -113,8 +105,6 @@ case $1 in
             echo -e "${green}Done"
             exit 1
     else
-       echo -e "${red}removing pkg file"
-       rm $2-pkg
        echo -e "${green}Done"
     fi
 
@@ -122,21 +112,10 @@ case $1 in
 
 # update a program
    -Up)
-      rm $2-pkg 2> /dev/null
-
-      case $? in
-           1)
-
-           ;;
-           0)
-            echo -e "${green}removing pkg file"
-           ;;
-      esac
-
       echo -e "${purple}updating program${blue}"
       cd /usr/local/src/$2 && sudo make uninstall && sudo rm -r /usr/local/src/$2
 
-      axel -a --output=$2-pkg https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg 2> /dev/null
+      sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo.latest/main/$2-pkg) 2> /dev/null
 
       case $? in
            1)
@@ -145,27 +124,7 @@ case $1 in
            ;;
       esac
 
-      source ~/"$2-pkg"
-
       echo -e "${green}Done"
-
-      rm *-pkg 2> /dev/null
-
-      case $? in
-           1)
-            echo -e "${blue}nothing to do"
-            echo -e "${green}no pkg files on the system"
-
-           ;;
-           0)
-            echo -e "${green}removed all pkg files"
-           ;;
-       esac
-
-      echo -e "${green}Done"
-
-
-
 
       ;;
 
