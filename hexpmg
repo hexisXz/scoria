@@ -29,19 +29,7 @@ case $1 in
          ;;
     esac
 
-    case $? in
-         1)
-          echo -e "${blue}nothing to do"
-          echo -e "${green}no pkg files on the system"
-
-         ;;
-         0)
-          echo -e "${green}removed all pkg files"
-         ;;
-     esac
-
      echo -e "${green}Done"
-
 
 
     ;;
@@ -66,22 +54,10 @@ case $1 in
            ;;
       esac
 
-      case $? in
-           1)
-            echo -e "${blue}nothing to do"
-            echo -e "${green}no pkg files on the system"
-
-           ;;
-           0)
-            echo -e "${green}removed all pkg files"
-           ;;
-       esac
-
        echo -e "${green}Done"
 
-
-
       ;;
+
 
 # uninstall hexpmg
   -UN)
