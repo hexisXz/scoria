@@ -17,7 +17,7 @@ read e
 
 if [ "$e" = "y" ]; then
 	if command -v curl >/dev/null; then
-		git clone https://github.com/hexisXz/hexpmg.git && cd hexpmg && chmod +x ~/hexpmg/hexpmg && mkdir ~/.local/bin/ && mv ~/hexpmg/hexpmg ~/.local/bin/ && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc  && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall ~/.config/hexpmg/ && sudo rm -r ~/hexpmg && echo -e "${green}Done" && echo 'if you use zsh make sure you have "export PATH="$HOME/.local/bin:$PATH" in your zshrc'
+		git clone https://github.com/hexisXz/hexpmg.git && cd hexpmg && chmod hexpmg && mkdir ~/.local/bin/ && mv hexpmg ~/.local/bin/ && echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc  && mkdir ~/.config/hexpmg/ && mv update ~/.config/hexpmg/ && mv uninstall ~/.config/hexpmg/ && cd ~/ && sudo rm -r hexpmg && echo -e "${green}Done" && echo 'if you use zsh make sure you have "export PATH="$HOME/.local/bin:$PATH" in your zshrc'
 
 	else
    	   echo "ERROR: you need curl to use hexpmg. installing curl.."
