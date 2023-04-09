@@ -14,6 +14,6 @@ if command -v yay 2>/dev/null; then
 		yay -Syu
 
 else
-   sudo rm ~/.local/bin/hexpmg && sudo rm -r ~/.config/hexpmg && echo -e "${blue}hexpmg will now reinstall.${green}" && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg/main/install.sh)
+   sudo rm -r ~/.local/bin/hexpmg && sudo rm -r ~/.config/hexpmg && echo -e "${blue}hexpmg will now reinstall.${green}" && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg/main/install.sh)
 
 fi

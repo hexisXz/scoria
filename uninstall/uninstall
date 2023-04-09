@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-sudo rm ~/.local/hexpmg && sudo rm -r ~/.config/hexpmg && echo "uninstalled." || echo "ERROR."
+sudo rm ~/.local/bin/hexpmg && sudo rm -r ~/.config/hexpmg && echo "uninstalled." || echo "ERROR."
 
 
 
