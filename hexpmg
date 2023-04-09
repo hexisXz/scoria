@@ -20,7 +20,7 @@ case $1 in
 # install a program
   -i)
      echo -e "${green}Downloading${purple}"
-     sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2-pkg) 2> /dev/null
+     sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg) 2> /dev/null
 
     case $? in
          1)
@@ -72,26 +72,18 @@ case $1 in
 # remove a program
   -R)
     echo -e "${red}removing program"
-    cd /usr/local/src/$2 && sudo make uninstall && sudo rm -r /usr/local/src/$2
+    cd /usr/local/src/$2/$2 sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall)    
 
-
-    e=$(ls | grep -i $2-pkg)
-
-    if command -v $e >/dev/null; then
-            echo -e "${green}Done"
-            exit 1
-    else
-       echo -e "${green}Done"
-    fi
+    echo -e "${green}Done"
 
     ;;
 
 # update a program
    -Up)
       echo -e "${purple}updating program${blue}"
-      cd /usr/local/src/$2 && sudo make uninstall && sudo rm -r /usr/local/src/$2
+      cd /usr/local/src/$2/$2 sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall) 
 
-      sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo.latest/main/$2-pkg) 2> /dev/null
+      sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/neofetch/$2-pkg) 2> /dev/null
 
       case $? in
            1)
