@@ -72,7 +72,7 @@ case $1 in
 # remove a program
   -R)
     echo -e "${red}removing program"
-    cd /usr/local/src/$2/$2 sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall)    
+    cd /usr/local/src/$2/$2 && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall)    
 
     echo -e "${green}Done"
 
@@ -81,7 +81,7 @@ case $1 in
 # update a program
    -Up)
       echo -e "${purple}updating program${blue}"
-      cd /usr/local/src/$2/$2 sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall) 
+      cd /usr/local/src/$2/$2 && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall) 
 
       sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/neofetch/$2-pkg) 2> /dev/null
 
