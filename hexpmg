@@ -88,7 +88,7 @@ case $1 in
 
 	-l: list all installed programs
 
-	-Up: update a program
+	-U: update a program
 	
 	-UP: update hexpmg
 	
@@ -102,7 +102,7 @@ case $1 in
 
         -l: list all installed programs
 
-	-Up: update a program
+	-U: update a program
 	
 	-UP: update hexpmg
 	
