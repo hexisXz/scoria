@@ -10,10 +10,5 @@ NC='\033[0m' # No Color
 
 echo -e "${green}updating"
 
-if command -v yay 2>/dev/null; then
-		yay -Syu
+sudo rm -r ~/.local/bin/hexpmg && sudo rm -r ~/.config/hexpmg && echo -e "${blue}hexpmg will now reinstall.${green}" && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg/main/install.sh)
 
-else
-   sudo rm -r ~/.local/bin/hexpmg && sudo rm -r ~/.config/hexpmg && echo -e "${blue}hexpmg will now reinstall.${green}" && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg/main/install.sh)
-
-fi
