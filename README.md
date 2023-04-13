@@ -35,17 +35,9 @@ in your terminal
 
 # **hexpmg repo**
 
-<https://github.com/hexisXz/hexpmg-repo> if you want the latest pkg&rsquo;s then you can go to <https://github.com/hexisXz/hexpmg-repo.latest>
+<https://github.com/hexisXz/hexpmg-repo>
 
 
-<a id="orgb149e50"></a>
-
-# **new**
-
-hexpmg is now in the aur!
-
-
-<a id="orgd87cbbc"></a>
 
 # hexpmg is not a replacement
 
