@@ -47,7 +47,7 @@ case $1 in
      exec ~/.config/hexpmg/uninstall/uninstall
      ;;
 
-# update hexpmg or update package manager
+# update hexpmg
   -UP)
      exec ~/.config/hexpmg/update/update
      ;;
@@ -62,7 +62,7 @@ case $1 in
     ;;
 
 # update a program
-   -Up)
+   -U)
       echo -e "${purple}updating program${blue}"
       cd /usr/local/src/$2 && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall) 
 
