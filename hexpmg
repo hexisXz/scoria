@@ -80,9 +80,18 @@ case $1 in
       ;;
 
 
+
+# search for a package
+  -s)
+    curl -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg | grep -i pkgname && echo "package found." || echo "ERROR: no packages found."
+      ;;
+
+
+
 # display a list of all commands
   -h)
     echo -e "${blue}usage: [-i install a program
+        -s: search for a package
 
         -R: remove a program
 
@@ -97,6 +106,7 @@ case $1 in
    ;;
   *)
    echo -e "${blue}usage: [-i: install a program
+   	-s: search for a package
 
         -R: remove a program
 
