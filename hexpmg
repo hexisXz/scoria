@@ -91,7 +91,8 @@ case $1 in
 # display a list of all commands
   -h)
     echo -e "${blue}usage: [-i install a program
-        -s: search for a package
+       
+       -s: search for a package
 
         -R: remove a program
 
@@ -106,7 +107,8 @@ case $1 in
    ;;
   *)
    echo -e "${blue}usage: [-i: install a program
-   	-s: search for a package
+   
+        -s: search for a package
 
         -R: remove a program
 
