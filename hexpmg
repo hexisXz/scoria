@@ -20,17 +20,7 @@ case $1 in
 # install a program
   -i)
      echo -e "${green}Downloading${purple}"
-     sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg) 2> /dev/null
-
-    case $? in
-         1)
-          echo -e "${red}Error wrong URL" && exit 1
-
-         ;;
-    esac
-
-     echo -e "${green}Done"
-
+     sh <(curl -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg) && echo -e "${green}Done"
 
     ;;
 
