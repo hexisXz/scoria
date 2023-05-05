@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 
 
-echo "do you want to install hexpmg? (y/n)"
+printf "do you want to install hexpmg? (y/n) "
 
 read e
 
