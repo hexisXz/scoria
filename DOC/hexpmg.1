@@ -1,0 +1,62 @@
+.\" Manpage for hexpmg.
+.\" Contact qk371994@gmail.com to correct errors or typos.
+.TH man 8 "20 May 2023" "1.14" "hexpmg man page"
+.SH NAME
+hexpmg - a simple package manager that builds programs from source 
+.SH EXAMPLES
+hexpmg -i [name of program to be installed.]
+
+hexpmg -i pfetch
+
+
+.SH REMOVE A PROGRAM
+
+hexpmg -R [name of program to be removed.]
+
+hexpmg -R pfetch
+
+
+.SH UPDATE A PROGRAM
+
+hexpmg -U [name of program to be updated.]
+
+hexpmg -U pfetch
+
+.SH DESCRIPTION
+hexpmg is a simple package manager that aims to be as simple as flatpak but with portage and pacman/AUR like capabilities, with soon to be added precompiled binaries.
+.SH OPTIONS
+here are all the options:
+.Bl -tag -width Ds
+ -i [program]
+    installs the program you provide with the -i option.
+
+
+ -R [program]
+    when -R is called and provided with a program it will remove the program from your system.
+
+
+ -U [program]
+    The -U flag will update the program you have entered after the flag.
+
+
+ -UP [no input]
+     when you run hexpmg -UP it will update hexpmg the the latest version.
+
+ 
+ -s [program] 
+    when providing the -s flag it will search for the program you entered. The -s flag will also give you the pkg-name there is a bug with some packages that will show you some if not all of the pkg.
+
+
+ -l [no input]
+    when runing hexpmg -l it will list all installed hexpmg programs.
+
+
+ -UN [no input]
+     running hexpmg -UN will uninstall hexpmg but WILL NOT removed the programs installed with hexpmg.
+ 
+.SH SEE ALSO
+.SH BUGS
+when running hexpmg -s [name of program] on some packages you will see the contents of the pkg.
+.SH AUTHOR
+hexis (github.com/hexisXz)
+
