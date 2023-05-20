@@ -25,9 +25,18 @@ case $1 in
     ;;
 
 
+
+  -ib)
+      echo -e "${green}Downloading${purple}"
+      sh <(curl -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg.b) && echo -e "${green}Done"
+
+    ;;
+
+
+
 # list all installed programs
   -l)
-    ls -al /usr/local/src/
+     ls -al /usr/local/src/
 
    ;;
 
@@ -44,10 +53,10 @@ case $1 in
 
 # remove a program
   -R)
-    echo -e "${red}removing program"
-    cd /usr/local/src/$2 && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall)    
+     echo -e "${red}removing program"
+     cd /usr/local/src/$2 ; sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall)    
 
-    echo -e "${green}Done"
+     echo -e "${green}Done"
 
     ;;
 
@@ -81,7 +90,9 @@ case $1 in
 # display a list of all commands
   -h)
     echo -e "${blue}usage: [-i install a program
-       
+
+       -ib: install a binary program
+ 
        -s: search for a package
 
         -R: remove a program
@@ -97,6 +108,8 @@ case $1 in
    ;;
   *)
    echo -e "${blue}usage: [-i: install a program
+
+        -ib: install a binary program
    
         -s: search for a package
 
