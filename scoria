@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##########
-# V 1.14.9#
+# V 1.90.1#
 ##########
 
 
@@ -20,7 +20,7 @@ case $1 in
 # install a program
   -i)
      echo -e "${green}Downloading${purple}"
-     sh <(curl -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg) && echo -e "${green}Done"
+     sh <(curl -L https://raw.githubusercontent.com/hexisXz/scoria-repo/main/$2/$2-pkg) && echo -e "${green}Done"
 
     ;;
 
@@ -28,7 +28,7 @@ case $1 in
 
   -ib)
       echo -e "${green}Downloading${purple}"
-      sh <(curl -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg.b) && echo -e "${green}Done"
+      sh <(curl -L https://raw.githubusercontent.com/hexisXz/scoria-repo/main/$2/$2-pkg.b) && echo -e "${green}Done"
 
     ;;
 
@@ -41,12 +41,12 @@ case $1 in
    ;;
 
 
-# uninstall hexpmg
+# uninstall scoria
   -UN)
      exec ~/.config/hexpmg/uninstall/uninstall
      ;;
 
-# update hexpmg
+# update scoria
   -UP)
      exec ~/.config/hexpmg/update/update
      ;;
@@ -54,7 +54,7 @@ case $1 in
 # remove a program
   -R)
      echo -e "${red}removing program"
-     cd /usr/local/src/$2 ; sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall)    
+     cd /usr/local/src/$2 ; sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/scoria-repo/main/$2/uninstall)    
 
      echo -e "${green}Done"
 
@@ -63,9 +63,9 @@ case $1 in
 # update a program
    -U)
       echo -e "${purple}updating program${blue}"
-      cd /usr/local/src/$2 && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/uninstall) 
+      cd /usr/local/src/$2 && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/scoria-repo/main/$2/uninstall) 
 
-      sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg) 2> /dev/null
+      sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/scoria-repo/main/$2/$2-pkg) 2> /dev/null
 
       case $? in
            1)
@@ -82,7 +82,7 @@ case $1 in
 
 # search for a package
   -s)
-    curl -L https://raw.githubusercontent.com/hexisXz/hexpmg-repo/main/$2/$2-pkg | grep -i pkgname && echo "package found." || echo "ERROR: no packages found."
+    curl -L https://raw.githubusercontent.com/hexisXz/scoria-repo/main/$2/$2-pkg | grep -i pkgname && echo "package found." || echo "ERROR: no packages found."
       ;;
 
 
@@ -101,9 +101,9 @@ case $1 in
 
 	-U: update a program
 	
-	-UP: update hexpmg
+	-UP: update scoria
 	
-	-UN: uninstall hexpmg]
+	-UN: uninstall scoria]
 "
    ;;
   *)
@@ -119,9 +119,9 @@ case $1 in
 
 	-U: update a program
 	
-	-UP: update hexpmg
+	-UP: update scoria
 	
-	-UN: uninstall hexpmg]"
+	-UN: uninstall scoria]"
 
    ;;
 esac

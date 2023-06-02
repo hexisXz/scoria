@@ -10,17 +10,17 @@ NC='\033[0m' # No Color
 
 
 
-printf "do you want to install hexpmg? (y/n) "
+printf "do you want to install scoria? (y/n) "
 
 read e
 
 
 if [ "$e" = "y" ]; then
 	if command -v curl >/dev/null; then
-		git clone https://github.com/hexisXz/hexpmg.git && cd ~/hexpmg && chmod +x ~/hexpmg/hexpmg && mkdir ~/.local/bin/hexpmg && mv ~/hexpmg/hexpmg ~/.local/bin/hexpmg && mkdir ~/.config/hexpmg/ && mv ~/hexpmg/update ~/.config/hexpmg/ && mv ~/hexpmg/uninstall ~/.config/hexpmg/ && sudo mv DOC/hexpmg.1 /usr/share/man/man8 && sudo rm -r ~/hexpmg && echo -e "${green}Done" && echo 'make sure you put "export PATH="$HOME/.local/bin/hexpmg:$PATH" in your zshrc or you bashrc.'
+		git clone https://github.com/hexisXz/scoria.git && cd scoria && chmod +x scoria/scoria && mkdir ~/.local/bin/scoria && mv scoria/scoria ~/.local/bin/scoria && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/ && sudo mv DOC/scoria.1 /usr/share/man/man8 && sudo rm -r ../scoria && echo -e "${green}Done" && echo 'make sure you put "export PATH="$HOME/.local/bin/scoria:$PATH" in your zshrc or you bashrc.'
 
 	else
-   	   echo "ERROR: you need curl to use hexpmg. installing curl.."
+   	   echo "ERROR: you need curl to use scoria. installing curl.."
    	   if command -v pacman 2>/dev/null; then
         	  sudo pacman -S curl
 
