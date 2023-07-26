@@ -24,9 +24,10 @@ a simple package manager that builds programs from source
 
 copy and paste
 
-> 
-> 
-> sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/scoria/main/install.sh)
+
+```sh 
+sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/scoria/main/install.sh)
+```
 
 in your terminal
 
@@ -55,5 +56,4 @@ scoria is not going to have all of the programs. it will mainly have programs th
 
 # more info
 
-read the wiki for more info
-
+the new scoria 3.0 update includes a full rewrite of scoria in C
