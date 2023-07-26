@@ -11,13 +11,11 @@ int main ( int argc, char **argv) {
 
  char *remove = NULL; 
 
- char *list = NULL;
-
  char *uninstall = NULL;
 
  char *search = NULL;
 
- while (( option_index = getopt(argc, argv, "i:hR:l:Us")) != -1){
+ while (( option_index = getopt(argc, argv, "i:hR:Us")) != -1){
    
    switch (option_index) {
      case 'i':
@@ -53,15 +51,6 @@ int main ( int argc, char **argv) {
        break;
 
        
-    case 'l':
-      list = optarg;
-      
-      char ListCommand[1000];
-      sprintf(ListCommand, "ls -al /usr/local/src/");
-
-      system(ListCommand);
-       break;
-
     case 'U':
       uninstall = optarg;
 
