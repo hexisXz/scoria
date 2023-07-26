@@ -11,22 +11,22 @@ NC='\033[0m' # No Color
 
 
 if command -v pacman 2>/dev/null; then
-	sudo pacman -S wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/
+	sudo pacman -S wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/ && sudo rm -r ~/scoria
 fi
 
 
 if command -v apt 2>/dev/null; then
-	 sudo apt install wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/
+	 sudo apt install wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/ && sudo rm -r ~/scoria
 
 fi
 
 if command -v dnf 2>/dev/null; then
-	 sudo dnf install wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/
+	 sudo dnf install wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/ && sudo rm -r ~/scoria 
 fi
 
 
 if command -v xbps-install 2>/dev/null; then
-	 sudo xbps-install -Sy wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/
+	 sudo xbps-install -Sy wget curl && cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && make && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/ && sudo rm -r ~/scoria
 fi
 
 
