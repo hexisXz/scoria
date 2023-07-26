@@ -10,5 +10,5 @@ NC='\033[0m' # No Color
 
 echo -e "${green}updating"
 
-sudo rm -r ~/.local/bin/scoria && sudo rm -r ~/.config/scoria && echo -e "${blue}hexpmg will now reinstall.${green}" && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/scoria/main/install.sh)
+sudo rm /bin/scoria && sudo rm -r ~/.config/scoria && echo -e "${blue}hexpmg will now reinstall.${green}" && sh <(curl -v -L https://raw.githubusercontent.com/hexisXz/scoria/main/install.sh)
 
