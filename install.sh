@@ -10,6 +10,9 @@ NC='\033[0m' # No Color
 
 
 
-printf "do you want to install scoria? (y/n) "
+echo -e "${blue}do you want to install scoria? (y/n)${blue}"
+
+
+cd ~/ && git clone https://github.com/hexisXz/scoria.git && cd ~/scoria && sudo make
 
 
