@@ -1,5 +1,5 @@
 install: scoria.c scoria
-	mv ~/scoria/scoria /bin/ && mkdir ~/.config/scoria/ && mv ~/scoria/update ~/.config/scoria/ && mv ~/scoria/uninstall ~/.config/scoria/ && gcc scoria.c -o scoria && sudo mv scoria /bin/ && sudo rm -r ~/scoria 
+	sudo mv ~/scoria/scoria /bin/ && gcc scoria.c -o scoria && sudo rm -r ~/scoria 
 
 uninstall:
-	rm /bin/scoria && sudo rm -r ~/.config/scoria && echo "uninstalled." || echo "ERROR."
+	sudo rm /bin/scoria && sudo rm -r ~/.config/scoria && echo "uninstalled." || echo "ERROR."
