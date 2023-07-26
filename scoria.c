@@ -17,7 +17,7 @@ int main ( int argc, char **argv) {
 
  char *search = NULL;
 
- while (( option_index = getopt(argc, argv, "i:hR:lU:s")) != -1){
+ while (( option_index = getopt(argc, argv, "i:hR:l:Us")) != -1){
    
    switch (option_index) {
      case 'i':
@@ -39,8 +39,7 @@ int main ( int argc, char **argv) {
      "-s: search for a package\n"
      "-R: remove a program\n"
      "-l: list all installed programs\n"
-     "-U: uninstall scoria\n"
-     "-u: update scoria\n");
+     "-U: update scoria\n");
        break;
     
      case 'R':
@@ -67,7 +66,7 @@ int main ( int argc, char **argv) {
       uninstall = optarg;
 
       char UninstallCommand[1000];
-      sprintf(UninstallCommand, "exec ~/.config/scoria/uninstall/uninstall");
+      sprintf(UninstallCommand, "exec ~/.config/scoria/update/update");
 
       system(UninstallCommand); 
        break;
