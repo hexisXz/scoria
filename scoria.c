@@ -33,7 +33,7 @@ int main ( int argc, char **argv) {
        break;
 
      case 'h':
-     printf("-i: install a binary program\n"
+     printf("-i: install program\n"
      "-s: search for a package\n"
      "-R: remove a program\n"
      "-l: list all installed programs\n"
