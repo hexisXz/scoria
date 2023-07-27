@@ -36,7 +36,6 @@ int main ( int argc, char **argv) {
      printf("-i: install program\n"
      "-s: search for a package\n"
      "-R: remove a program\n"
-     "-l: list all installed programs\n"
      "-U: update scoria\n");
        break;
     
