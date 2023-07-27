@@ -13,9 +13,7 @@ int main ( int argc, char **argv) {
 
  char *uninstall = NULL;
 
- char *search = NULL;
-
- while (( option_index = getopt(argc, argv, "i:hR:Us")) != -1){
+ while (( option_index = getopt(argc, argv, "i:hR:U")) != -1){
    
    switch (option_index) {
      case 'i':
@@ -34,7 +32,6 @@ int main ( int argc, char **argv) {
 
      case 'h':
      printf("-i: install program\n"
-     "-s: search for a package\n"
      "-R: remove a program\n"
      "-U: update scoria\n");
        break;
@@ -59,15 +56,6 @@ int main ( int argc, char **argv) {
       system(UninstallCommand); 
        break;
 
-    case 's':
-      search = optarg;
-
-      char SearchCommand[1000];
-      sprintf(SearchCommand, "curl -L 'https://raw.githubusercontent.com/hexisXz/scoria-repo/main/%s/%s-pkg' | grep -i pkgname=", search, search);
-
-      system(SearchCommand);
-
-       break;
     default:
       printf("Option incorrect\n");
       return 1;
