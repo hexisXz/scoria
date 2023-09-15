@@ -35,11 +35,26 @@
 		      	      	      	       		     
 						       commercial use
  
+		   You are NOT permited to use any other License.
 		   The FPRPL can be used for commercial use as long
 		   as the software under this License remains Open-source to Everyone.
 		   Otherwise it is NOT permitted. This doesn't mean your software can't be Closed-source because
-		   this License allows you to use any other License. Only when you choose to use this License under
-		   your software it must be Open-source.
+		   this License will allow you to make any copies of software under this License Closed-source.
+		   Meaning, only copies of the software can do what they want like making it Closed-source.
+		   Only when a new project is made it must be Open-source.
+
+
+
+
+
+
+		    	       	   	      	      	   credit
+							   
+		   If you make a copy of someone else's code you must provide credit.
+		   it can be a name, email, website, youtube, github it doesn't matter. You MUST
+		   give credit to the orignal author somewhere in your code. it can be a README or the code itself
+		   it doesn't matter at least a name has to be provided for users who want to view the
+		   orignal source code.
 
 
 
