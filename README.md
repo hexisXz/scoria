@@ -49,7 +49,7 @@ this is stated in the wiki but i will say it again <span class="underline">hexpm
 
 # About scoria
 
-scoria is not going to have all of the programs. it will mainly have programs that can be compiled from source witch is most things. hexpmg was made to automate the process of compiling programs from source so you don&rsquo;t have to.
+scoria is not going to have all of the programs. it will mainly have programs that can be compiled from source witch is most things. scoria was made to automate the process of compiling programs from source so you don&rsquo;t have to.
 
 
 <a id="org22f01f6"></a>
