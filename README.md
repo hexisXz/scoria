@@ -42,7 +42,7 @@ in your terminal
 
 # scoria is not a replacement
 
-this is stated in the wiki but i will say it again <span class="underline">hexpmg is not a replacement for your distros package manager</span>. so dont remove your distros package manager or things will break.
+this is stated in the wiki but i will say it again <span class="underline">scoria is not a replacement for your distros package manager</span>. so dont remove your distros package manager or things will break.
 
 
 <a id="org0fde68a"></a>
