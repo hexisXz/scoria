@@ -22,7 +22,7 @@ int main ( int argc, char **argv) {
        
        char command[1000];
 
-       sprintf(command, "wget -q --show-progress --progress=bar:force 2>&1 https://raw.githubusercontent.com/hexisXz/scoria-repo/main/%s/%s-pkg && sh %s-pkg ; rm *-pkg", install, install, install);
+       sprintf(command, "wget -q --show-progress --progress=bar:force 2>&1 https://raw.githubusercontent.com/hexisXz/scoria-repo/main/%s/%s-pkg && sh %s-pkg ", install, install, install);
        
        system(command);
 
